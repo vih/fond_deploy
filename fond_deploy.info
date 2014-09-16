@@ -1,6 +1,6 @@
 core = "7.x"
 description = "Deploy module for Fond"
-name = "Fond Admin"
+name = "Fond Deploy"
 package = "Fond"
 project = "fond_deploy"
 version = "7.x-0.1"
