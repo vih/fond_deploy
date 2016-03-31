@@ -168,14 +168,14 @@ function fond_deploy_update_7008() {
 /**
  * Set media dialog theme to seven
  */
-function fond_deploy_update_7010() {
+function fond_deploy_update_7009() {
   variable_set('media_dialog_theme', 'seven');
 }
 
 /**
  * Settings for transliteration.
  */
-function fond_deploy_update_7011() {
+function fond_deploy_update_7010() {
   module_enable(array('transliteration'));
   if (module_exists('pathauto')) {
     if (module_exists('transliteration')) {
