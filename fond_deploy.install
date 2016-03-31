@@ -97,7 +97,7 @@ function fond_deploy_update_7001() {
 function fond_deploy_update_7002() {
   module_disable(array('apps'));
   drupal_uninstall_modules(array('apps'));
-  
+
   module_disable(array('panopoly_news_demo'));
   drupal_uninstall_modules(array('panopoly_news_demo'));
 }
@@ -163,4 +163,24 @@ function fond_deploy_update_7008() {
   module_enable(array('vih_plugins'));
   module_enable(array('fond_commerce'));
   module_enable(array('fond_admin'));
+}
+
+/**
+ * Set media dialog theme to seven
+ */
+function fond_deploy_update_7010() {
+  variable_set('media_dialog_theme', 'seven');
+}
+
+/**
+ * Settings for transliteration.
+ */
+function fond_deploy_update_7011() {
+  module_enable(array('transliteration'));
+  if (module_exists('pathauto')) {
+    if (module_exists('transliteration')) {
+      variable_set('pathauto_transliterate', 1);
+    }
+    variable_set('pathauto_reduce_ascii', 1);
+  }
 }
